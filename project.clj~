@@ -1,0 +1,25 @@
+(defproject hangman "0.1.0-SNAPSHOT"
+  :description "FIXME: write description"
+  :url "http://example.com/FIXME"
+  :license {:name "Eclipse Public License"
+            :url  "http://www.eclipse.org/legal/epl-v10.html"}
+  :dependencies [[org.clojure/clojure "1.7.0"]]
+  :main ^:skip-aot hangman.core
+  :target-path "target/%s"
+  :profiles {:uberjar {:aot :all}
+             :user    {:plugins [[lein-ancient "0.6.8"]     ; lein ancient - search for outdated dependencies
+                                 [lein-cljfmt "0.3.0"]      ; lein cljfmt fix - format code
+                                 [lein-kibit "0.1.2"]       ; lein kibit - static code analyzer
+                                 [jonase/eastwood "0.2.3"]  ; lein eastwood - code linter
+                                 [lein-bikeshed "0.2.0"]    ; lein bikeshed - code linter
+                                 [lein-cloverage "1.0.6"]   ; lein cloverage - test coverage/check target folder
+	                         [lein-annotations "0.1.0"] ; lein annotations
+		                 [lein-webrepl "0.1.0-SNAPSHOT"] ; lein webrepl
+                                 [venantius/ultra "0.4.0"]  ; make console colorful
+                                 [com.jakemccrary/lein-test-refresh "0.11.0"] ; lein test-refresh - retest on file save
+                                 [lein-autoreload "0.1.0"]  ; autoreload in repl on file change
+                                 [lein-vanity "0.2.0"]      ; lein vanity - code statistics
+                                 [lein-instant-cheatsheet "2.1.4"] ; lein instant-cheatsheet - localhost:13370
+                                 [lein-codox "0.9.1"]       ; lein codox - 
+                                 ]
+                       }})
